@@ -1,0 +1,117 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\migrations\\20241129161540_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\migrations\\20241129161540_v1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "AngularAuthAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAApwB8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T17:11:06.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20241129161540_v1.cs",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Migrations\\20241129161540_v1.cs",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\Migrations\\20241129161540_v1.cs",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Migrations\\20241129161540_v1.cs",
+              "RelativeToolTip": "AngularAuthAPI\\Migrations\\20241129161540_v1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T16:15:40.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\appsettings.json",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\appsettings.json",
+              "RelativeToolTip": "AngularAuthAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-28T19:24:54.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Program.cs",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\Program.cs",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Program.cs",
+              "RelativeToolTip": "AngularAuthAPI\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T19:21:33.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\Context\\AppDbContext.cs",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "AngularAuthAPI\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAMwAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T18:35:53.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\Models\\User.cs",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Models\\User.cs",
+              "RelativeToolTip": "AngularAuthAPI\\Models\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T17:58:12.876Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
