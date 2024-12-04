@@ -1,8 +1,11 @@
 ﻿using AngularAuthAPI.Context;
+using AngularAuthAPI.Helpers;
 using AngularAuthAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AngularAuthAPI.Controllers
 {
@@ -41,6 +44,20 @@ namespace AngularAuthAPI.Controllers
             if (userObj == null)
                 return BadRequest();
 
+            if (await CheckUserNameExist(userObj.Username))
+                return BadRequest("Username already exist!");
+
+            if (await CheckEmailExist(userObj.Email))
+                return BadRequest("Email already exist!");
+
+            var pass = CheckPasswordStrength(userObj.Password);
+            if(!string.IsNullOrEmpty(pass))
+                return BadRequest(new { Message = pass.ToString() });
+
+            userObj.Password = PasswordHasher.HashPassword(userObj.Password);
+            userObj.Role = "User";
+            userObj.Token = "";
+
             await _authContext.Users.AddAsync(userObj);
             await _authContext.SaveChangesAsync();
 
@@ -48,6 +65,27 @@ namespace AngularAuthAPI.Controllers
             {
                 Message = "User Registered!"
             });
+        }
+
+        private Task<bool> CheckUserNameExist(string username)
+        => _authContext.Users.AnyAsync(x => x.Username == username);
+
+        private Task<bool> CheckEmailExist(string email)
+        => _authContext.Users.AnyAsync(x => x.Email == email);
+
+        private string CheckPasswordStrength(string password)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            if(password.Length < 8)
+                stringBuilder.Append("Minimum password length should be 8" + Environment.NewLine);
+
+            if(!(Regex.IsMatch(password, "[a-z]") && Regex.IsMatch(password,"A-Z") && Regex.IsMatch(password,"0-9")))
+                stringBuilder.Append("Password should be Alfanumeric" + Environment.NewLine);
+
+            if (!Regex.IsMatch(password, "[<,>,@,!,#,$,%,&,^]"))
+                stringBuilder.Append("Password should be Alfanumeric" + Environment.NewLine);
+
+            return stringBuilder.ToString();
         }
     }
 }
