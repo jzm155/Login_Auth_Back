@@ -64,3 +64,4 @@ D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\refin
 D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\AngularAuthAPI.pdb
 D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\AngularAuthAPI.genruntimeconfig.cache
 D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\ref\AngularAuthAPI.dll
+D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\AngularAuthAPI.sourcelink.json
