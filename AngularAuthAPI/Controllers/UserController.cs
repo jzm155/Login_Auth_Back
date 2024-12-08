@@ -4,6 +4,9 @@ using AngularAuthAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -37,8 +40,11 @@ namespace AngularAuthAPI.Controllers
                 return BadRequest(new { Message = "Password is Incorrect!" });
             }
 
+            user.Token = CreateJWT(user);
+
             return Ok(new
             {
+                Token = user.Token,
                 Message = "Login Success!"
             });
         }
@@ -72,6 +78,12 @@ namespace AngularAuthAPI.Controllers
             });
         }
 
+        [HttpGet]
+        public async Task<ActionResult<User>> GetAllUsers()
+        {
+            return Ok(await _authContext.Users.ToListAsync());
+        }
+
         private Task<bool> CheckUserNameExist(string username)
         => _authContext.Users.AnyAsync(x => x.Username == username);
 
@@ -91,6 +103,29 @@ namespace AngularAuthAPI.Controllers
                 stringBuilder.Append("Password should be Alfanumeric" + Environment.NewLine);
 
             return stringBuilder.ToString();
+        }
+
+        private string CreateJWT(User user)
+        {
+            var jwtYokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes("veryverysecret.....");
+            var identity = new ClaimsIdentity(new Claim[]
+            {
+                new Claim(ClaimTypes.Role,user.Role),
+                new Claim(ClaimTypes.Name,$"{user.FirstName} {user.LastName}")
+            });
+
+            var credentials = new SigningCredentials(new SymmetricSecurityKey(key),SecurityAlgorithms.HmacSha256);
+
+            var tokenDescription = new SecurityTokenDescriptor
+            {
+                Subject = identity,
+                Expires = DateTime.Now.AddDays(1),
+                SigningCredentials = credentials,
+            };
+
+            var token = jwtYokenHandler.CreateToken(tokenDescription);
+            return jwtYokenHandler.WriteToken(token);
         }
     }
 }

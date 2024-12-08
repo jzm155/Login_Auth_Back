@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "AngularAuthAPI.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "AngularAuthAPI.Models.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AngularAuthAPI.Controllers.UserController",
     "Method": "Authenticate",
     "RelativePath": "api/User/authenticate",
     "HttpMethod": "POST",
