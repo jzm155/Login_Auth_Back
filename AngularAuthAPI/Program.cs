@@ -46,7 +46,8 @@ namespace AngularAuthAPI
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryverysecret.....")),
                     ValidateAudience = false,
-                    ValidateIssuer = false
+                    ValidateIssuer = false,
+                    ClockSkew = TimeSpan.Zero
                 };
             });
 

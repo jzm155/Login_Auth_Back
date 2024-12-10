@@ -1,6 +1,7 @@
 ﻿using AngularAuthAPI.Context;
 using AngularAuthAPI.Helpers;
 using AngularAuthAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -77,7 +78,7 @@ namespace AngularAuthAPI.Controllers
                 Message = "User Registered!"
             });
         }
-
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<User>> GetAllUsers()
         {
