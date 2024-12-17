@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\models\\dto\\tokenapidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\models\\dto\\tokenapidto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\migrations\\20241214235143_addedrefreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\migrations\\20241214235143_addedrefreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|solutionrelative:angularauthapi\\helpers\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95F2FA59-DD44-4ED5-A357-AFB30FEAE074}|AngularAuthAPI\\AngularAuthAPI.csproj|d:\\projetos\\login_auth\\back\\angularauthapi\\angularauthapi\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +46,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "TokenApiDto.cs",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Models\\Dto\\TokenApiDto.cs",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\Models\\Dto\\TokenApiDto.cs",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Models\\Dto\\TokenApiDto.cs",
+              "RelativeToolTip": "AngularAuthAPI\\Models\\Dto\\TokenApiDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T00:22:05.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20241214235143_addedRefreshToken.cs",
+              "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Migrations\\20241214235143_addedRefreshToken.cs",
+              "RelativeDocumentMoniker": "AngularAuthAPI\\Migrations\\20241214235143_addedRefreshToken.cs",
+              "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Migrations\\20241214235143_addedRefreshToken.cs",
+              "RelativeToolTip": "AngularAuthAPI\\Migrations\\20241214235143_addedRefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T23:51:44.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PasswordHasher.cs",
               "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Helpers\\PasswordHasher.cs",
               "RelativeDocumentMoniker": "AngularAuthAPI\\Helpers\\PasswordHasher.cs",
@@ -60,14 +92,14 @@
               "RelativeDocumentMoniker": "AngularAuthAPI\\Controllers\\UserController.cs",
               "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Controllers\\UserController.cs",
               "RelativeToolTip": "AngularAuthAPI\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAEwFAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDwAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T17:11:06.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "20241129161540_v1.cs",
               "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Migrations\\20241129161540_v1.cs",
               "RelativeDocumentMoniker": "AngularAuthAPI\\Migrations\\20241129161540_v1.cs",
@@ -79,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\appsettings.json",
               "RelativeDocumentMoniker": "AngularAuthAPI\\appsettings.json",
@@ -91,20 +123,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Program.cs",
               "RelativeDocumentMoniker": "AngularAuthAPI\\Program.cs",
               "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Program.cs",
               "RelativeToolTip": "AngularAuthAPI\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAgwDEAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwDgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T19:21:33.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T19:21:33.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Context\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AngularAuthAPI\\Context\\AppDbContext.cs",
@@ -116,15 +147,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Models\\User.cs",
               "RelativeDocumentMoniker": "AngularAuthAPI\\Models\\User.cs",
               "ToolTip": "D:\\Projetos\\Login_Auth\\Back\\AngularAuthAPI\\AngularAuthAPI\\Models\\User.cs",
               "RelativeToolTip": "AngularAuthAPI\\Models\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAADwvxEAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T17:58:12.876Z"
+              "WhenOpened": "2024-11-28T17:58:12.876Z",
+              "EditorCaption": ""
             }
           ]
         }

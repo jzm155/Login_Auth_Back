@@ -37,6 +37,22 @@
   },
   {
     "ContainingType": "AngularAuthAPI.Controllers.UserController",
+    "Method": "Refresh",
+    "RelativePath": "api/User/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenApiDto",
+        "Type": "AngularAuthAPI.Models.Dto.TokenApiDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AngularAuthAPI.Controllers.UserController",
     "Method": "RegisterUser",
     "RelativePath": "api/User/register",
     "HttpMethod": "POST",
