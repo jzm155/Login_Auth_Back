@@ -65,3 +65,9 @@ D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\Angul
 D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\AngularAuthAPI.genruntimeconfig.cache
 D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\ref\AngularAuthAPI.dll
 D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\AngularAuthAPI.sourcelink.json
+D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\bin\Debug\net8.0\MailKit.dll
+D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\bin\Debug\net8.0\MimeKit.dll
+D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\bin\Debug\net8.0\NETCore.MailKit.dll
+D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\bin\Debug\net8.0\BouncyCastle.Crypto.dll
+D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\bin\Debug\net8.0\AngularAuthAPI.xml
+D:\Projetos\Login_Auth\Back\AngularAuthAPI\AngularAuthAPI\obj\Debug\net8.0\AngularAuthAPI.xml

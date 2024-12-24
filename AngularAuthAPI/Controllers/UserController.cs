@@ -2,6 +2,7 @@
 using AngularAuthAPI.Helpers;
 using AngularAuthAPI.Models;
 using AngularAuthAPI.Models.Dto;
+using AngularAuthAPI.UtilityService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,12 +21,24 @@ namespace AngularAuthAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _authContext;
+        private readonly IConfiguration _configuration;
+        private readonly IEmailService _emailService;
 
-        public UserController(AppDbContext authContext)
+        public UserController(AppDbContext authContext, IConfiguration configuration,IEmailService emailService)
         {
             _authContext = authContext;
+            _configuration = configuration;
+            _emailService = emailService;
         }
 
+        /// <summary>
+        /// Autenticar token
+        /// </summary>
+        /// <remarks>Objeto JSON</remarks>
+        /// <param name="userObj">Usuario a ser autenticado</param>
+        /// <returns>Novo token autenticação</returns>
+        /// <response code="404">Não encontrado</response>
+        /// <response code="204">Sucesso</response>
         [HttpPost("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] User userObj)
         {
@@ -57,6 +70,14 @@ namespace AngularAuthAPI.Controllers
             });
         }
 
+        /// <summary>
+        /// Registrar Usuario
+        /// </summary>
+        /// <remarks>Objeto JSON</remarks>
+        /// <param name="userObj">Dados do Usuario</param>
+        /// <returns>Novo usuário</returns>
+        /// <response code="204">Sucesso</response>
+        /// <response code="404">Não encontrado</response>
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] User userObj)
         {
@@ -85,6 +106,14 @@ namespace AngularAuthAPI.Controllers
                 Message = "User Registered!"
             });
         }
+
+        /// <summary>
+        /// Retorna todos os Usuario
+        /// </summary>
+        /// <remarks>Objeto JSON</remarks>
+        /// <returns>Todos usuarios</returns>
+        /// <response code="204">Sucesso</response>
+        /// <response code="404">Não encontrado</response>
         [Authorize]
         [HttpGet]
         public async Task<ActionResult<User>> GetAllUsers()
@@ -104,7 +133,7 @@ namespace AngularAuthAPI.Controllers
             if(password.Length < 8)
                 stringBuilder.Append("Minimum password length should be 8" + Environment.NewLine);
 
-            if(!(Regex.IsMatch(password, "[a-z]") && Regex.IsMatch(password,"A-Z") && Regex.IsMatch(password,"0-9")))
+            if(!(Regex.IsMatch(password, "[a-z]") && Regex.IsMatch(password,"[A-Z]") && Regex.IsMatch(password,"[0-9]")))
                 stringBuilder.Append("Password should be Alfanumeric" + Environment.NewLine);
 
             if (!Regex.IsMatch(password, "[<,>,@,!,#,$,%,&,^]"))
@@ -173,6 +202,14 @@ namespace AngularAuthAPI.Controllers
             return principal;
         }
 
+        /// <summary>
+        /// Recarrega o Token
+        /// </summary>
+        /// <remarks>Objeto JSON</remarks>
+        /// <param name="tokenApiDto">Dados do Token</param>
+        /// <returns>Novo token</returns>
+        /// <response code="204">Sucesso</response>
+        /// <response code="404">Não encontrado</response>
         [HttpPost("refresh")]
         public async Task<IActionResult> Refresh(TokenApiDto tokenApiDto)
         {
@@ -197,6 +234,88 @@ namespace AngularAuthAPI.Controllers
                 AccessToken = newAccessToken,
                 RefreshToken = newRefreshToken,
             });
+        }
+
+        /// <summary>
+        /// Enviar email para resetar a senha
+        /// </summary>
+        /// <remarks>Objeto JSON</remarks>
+        /// <param name="email">Email para trocar a senha</param>
+        /// <returns>link para renovar a senha</returns>
+        /// <response code="200">Email Enviado</response>
+        /// <response code="404">Email Não encontrado</response>
+        [HttpPost("send-reset-email/{email}")]
+        public async Task<IActionResult> SendEmail(string email)
+        {
+            var user = _authContext.Users.FirstOrDefault(x => x.Email == email);
+            if (user == null)
+            {
+                return NotFound(new
+                {
+                    StatusCode = 404,
+                    Message = "Email Doesn't Exist"
+                });
+            }
+            var tokenBytes = RandomNumberGenerator.GetBytes(64);
+            var emailToken = Convert.ToBase64String(tokenBytes);
+            user.ResetPasswordToken = emailToken;
+            user.ResetPasswordExpiry = DateTime.Now.AddMinutes(30);
+            string from = _configuration["EmailSettings:From"];
+            var emailModel = new EmailModel(email, "Reset Password!", EmailBody.EmailStringBody(email,emailToken));
+            _emailService.SendEmail(emailModel);
+            _authContext.Entry(user).State = EntityState.Modified;
+            await _authContext.SaveChangesAsync();
+            return Ok(new
+            {
+                StatusCode = 200,
+                Message = "Email Sent!"
+            });
+        }
+
+        /// <summary>
+        /// Resetar a senha
+        /// </summary>
+        /// <remarks>Objeto JSON</remarks>
+        /// <param name="resetPasswordDto">Dados para resetar a senha</param>
+        /// <returns>Novo token</returns>
+        /// <response code="200">Senha alterada com sucesso</response>
+        /// <response code="400">Link para reset invalido</response>
+        /// <response code="404">Usuario Não encontrado</response>
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordDto resetPasswordDto)
+        {
+            var newToken = resetPasswordDto.EmailToken.Replace(" ", "+");
+            var user = await _authContext.Users.AsNoTracking().FirstOrDefaultAsync(x => x.Email == resetPasswordDto.Email);
+
+            if (user == null)
+            {
+                return NotFound(new 
+                { 
+                    StatusCode = 404,
+                    Message = "User Doesn't Exist!"
+                });
+            }
+            var tokenCode = user.ResetPasswordToken;
+            DateTime? emailTokenExpiry = user.ResetPasswordExpiry;
+
+            if(tokenCode != resetPasswordDto.EmailToken || emailTokenExpiry < DateTime.Now)
+            {
+                return BadRequest(new
+                {
+                    StatusCode = 400,
+                    Message = "Invalid Reset Link!"
+                });
+            }
+
+            user.Password = PasswordHasher.HashPassword(resetPasswordDto.NewPassword);
+            _authContext.Entry(user).State = EntityState.Modified; 
+            await _authContext.SaveChangesAsync();
+
+            return Ok(new {
+                StatusCode = 200,
+                Message = "Password Reset Sucefully"
+            });
+
         }
     }
 }
